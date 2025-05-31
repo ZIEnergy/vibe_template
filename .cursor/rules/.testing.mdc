@@ -3,3 +3,10 @@ description:
 globs:
 alwaysApply: false
 ---
+# Testing Rules (always applied)
+
+## Testing Framework
+- Use Vitest for all testing.
+
+## Test Requirements
+- Every new utility requires at least one happy-path test and one edge-case test.

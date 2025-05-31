@@ -3,3 +3,17 @@ description:
 globs:
 alwaysApply: false
 ---
+# Global Rules for AI (always applied)
+
+## Language & Style
+- Always use TypeScript strict mode; no "any".
+- Prefer functional React components with hooks; no classes.
+- Use Tailwind/NativeWind utility classes for styling; never inline styles except one-offs.
+
+## Architecture
+- Assume Expo + React Native Web (shared code). Create `.android.tsx`, `.ios.tsx`, or `.web.tsx` only when platform APIs diverge.
+- Navigation = Expo Router file-based routing under /app.
+- State = Zustand unless Redux Toolkit already exists.
+
+## Size
+- Keep every file under 300 LoC; if larger, suggest a refactor.
